@@ -1,0 +1,288 @@
+/* src/styles/AdherentManagement.css - Version modernisée */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Container principal */
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* Titre principal */
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Boutons d'action */
+.action-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button[class*="format-excel"] {
+  background-color: #27ae60;
+}
+
+button[class*="format-excel"]:hover {
+  background-color: #219955;
+}
+
+/* Zone de recherche et filtres */
+.search-filters {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-filters label {
+  font-weight: 500;
+  margin-right: 8px;
+  color: #555;
+}
+
+.search-filters select, 
+.search-filters input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.search-filters select:focus, 
+.search-filters input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.search-filters input {
+  width: 250px;
+}
+
+/* Tableau de données */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #37474f;
+  border-bottom: 2px solid #e1e5eb;
+  position: sticky;
+  top: 0;
+}
+
+.data-table tr {
+  transition: background-color 0.15s;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+.data-table tr:hover {
+  background-color: #f1f5fa;
+}
+
+.data-table td {
+  border-bottom: 1px solid #eaedf2;
+}
+
+/* Statut des adhérents */
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.actif {
+  background-color: #e3f7ed;
+  color: #15803d;
+}
+
+.inactif {
+  background-color: #f1f2f4;
+  color: #64748b;
+}
+
+/* Boutons d'action dans le tableau */
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.actions button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.actions button:hover {
+  background-color: #e9ecef;
+  transform: scale(1.1);
+}
+
+.actions button:first-child:hover {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.actions button:nth-child(2):hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.actions button:last-child:hover {
+  background-color: #e0f2f1;
+  color: #009688;
+}
+
+/* Style pour les couleurs */
+.color-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Pagination et footer */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #f1f5fa;
+  border-color: #c1c9d4;
+}
+
+.pagination button.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  color: #6b7280;
+  font-size: 14px;
+  border-top: 1px solid #eaedf2;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .search-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+  
+  .search-filters input {
+    width: 100%;
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .action-btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
